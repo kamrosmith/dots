@@ -170,6 +170,7 @@ bar {
 # custom commands
 bindsym $mod+r exec urxvt -e ranger
 bindsym $mod+c exec urxvt -e calcurse
+bindsym $mod+r exec qutebrowser
 
 # makes monitors cohesive
 exec_always xrandr --output DVI-D-0 --mode 1920x1080 --pos 3840x0 --rotate normal --output HDMI-0 --primary --mode 1920x1080 --pos 1920x0 --rotate normal --output DP-5 --off --output DP-4 --off --output DP-3 --mode 1920x1080 --pos 0x0 --rotate normal --output DP-2 --off --output DP-1 --off --output DP-0 --off
