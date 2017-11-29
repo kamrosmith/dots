@@ -1,8 +1,6 @@
 #
 # ~/.bashrc
-#
-
-screenfetch -D arch
+# screenfetch -D arch
 echo -e -n "\x1b[\x35 q"
 if [ -f $HOME/.gitalias ]; then
 	. $HOME/.gitalias
@@ -22,6 +20,9 @@ cmkdir () {
 	mkdir "$1" && mkdir "$1"
 }
 
+pdf () {
+	(apvlv "$@" &> /dev/null &)
+}
 alias pd='pushd ..'
 alias ppd='popd'
 alias dirs='dirs -v'

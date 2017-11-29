@@ -109,9 +109,13 @@ bindsym $mod+Shift+4 move container to workspace $workspace4
 assign [class="URxvt"] $workspace2
 assign [class="qutebrowser"] $workspace3
 assign [class="discord"] $workspace1
+assign [class="Apvlv"] $workspace4
 
-# because spotitfy is a whore and needs to fix their shit
+# moving windows to workspaces also spotify is a whore
 for_window [class="Spotify"] move to workspace $workspace1
+for_window [class="Apvlv"] move to workspace $workspace4
+
+# assigning qutebrowser a different color border (diff size maybe?)
 
 # also because i hate things popping up at me
 no_focus [class="Spotify"]
@@ -170,7 +174,7 @@ bar {
 # custom commands
 bindsym $mod+r exec urxvt -e ranger
 bindsym $mod+c exec urxvt -e calcurse
-bindsym $mod+r exec qutebrowser
+bindsym $mod+q exec qutebrowser
 
 # makes monitors cohesive
 exec_always xrandr --output DVI-D-0 --mode 1920x1080 --pos 3840x0 --rotate normal --output HDMI-0 --primary --mode 1920x1080 --pos 1920x0 --rotate normal --output DP-5 --off --output DP-4 --off --output DP-3 --mode 1920x1080 --pos 0x0 --rotate normal --output DP-2 --off --output DP-1 --off --output DP-0 --off
@@ -185,8 +189,8 @@ exec --no-startup-id spotify
 # focus follows mouse
 focus_follows_mouse no
 
-new_window pixel 2
-for_window [class="qutebrowser"] new_window pixel 10
+new_window pixel 3
+for_window [class="qutebrowser"] pixel 10
 new_float none
 
 # media controls
