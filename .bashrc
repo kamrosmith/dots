@@ -6,33 +6,30 @@ if [ -f $HOME/.gitalias ]; then
 	. $HOME/.gitalias
 fi
 lsd () {
-	cd "$2" $$ ls
-}
-
-bk () {
-	cd ..
+	cd "$1" $$ ls
 }
 rnm () {
 	cp -r "$1" "$2" && rm -rf "$1"
 }
 
 cmkdir () {
-	mkdir "$1" && mkdir "$1"
+	mkdir "$1" && cd "$1"
 }
 
 pdf () {
 	(apvlv "$@" &> /dev/null &)
 }
+
+alias py='python3'
+alias bk='cd ..'
 alias pd='pushd ..'
 alias ppd='popd'
 alias dirs='dirs -v'
-alias virt-manager='sudo virt-manager'
 alias po='poweroff'
 alias vi='nvim'
 alias vim='nvim'
 alias n="nvim"
 alias v="nvim"
-alias clear='clear && screenfetch -D arch'
 export EDITOR=/usr/bin/nvim
 export VISUAL=/usr/bin/nvim
 export MONITOR=HDMI-0

@@ -25,6 +25,8 @@ Plug 'chriskempson/base16-vim'
 Plug 'flazz/vim-colorschemes'
 
 Plug 'scrooloose/NerdTree'
+
+Plug 'machakann/vim-highlightedyank'
 call plug#end()
 
 " Color and theme
@@ -35,6 +37,7 @@ set background=dark
 set relativenumber
 set number
 set encoding=utf-8
+set incsearch
 
 " Airline config options, need to figure out font
 set guifont=Source\ Code\ Pro\ Medium\ for\ Powerline
@@ -71,6 +74,11 @@ endfor
 noremap <silent> <C-S> :update<cr>
 vnoremap <silent> <C-S> <C-C>:update<cr>
 inoremap <silent> <C-S> <C-O>:update<cr>
+
+" makes ctrl-q quit
+noremap <silent> <C-Q> :quit<cr>
+vnoremap <silent> <C-Q> :quit<cr>
+inoremap <silent> <C-Q> :quit<cr>
 
 " no hightlight on searches
 set nohlsearch
